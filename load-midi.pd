@@ -1,4 +1,4 @@
-#N canvas 302 120 632 557 10;
+#N canvas 460 64 757 693 10;
 #X obj 170 251 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 171 271 read;
@@ -18,21 +18,23 @@
 #X msg 316 274 play;
 #X obj 429 123 route play pause stop;
 #X text 336 520 MIDI output;
-#X obj 430 489 outlet;
+#X obj 510 489 outlet;
 #X obj 103 126 bng 30 250 50 0 empty empty open 0 -5 0 9 -262144 -1
 -1;
 #X obj 138 124 bng 15 250 50 0 empty empty play 20 7 0 9 -262144 -1
 -1;
 #X obj 138 142 bng 15 250 50 0 empty empty stop 20 7 0 9 -262144 -1
 -1;
-#X text 430 518 channel;
+#X text 510 518 channel;
 #X msg 60 316 read \$1;
-#X obj 169 108 tgl 8 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 169 108 tgl 8 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 324 90 0;
 #X msg 355 92 1;
-#X obj 515 495 outlet;
-#X text 514 517 finish load?;
+#X obj 595 495 outlet;
+#X text 594 517 finish load?;
+#X obj 428 495 outlet;
+#X text 427 521 velocity;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -43,6 +45,7 @@
 #X connect 4 0 5 0;
 #X connect 4 1 5 1;
 #X connect 5 0 6 0;
+#X connect 5 1 28 0;
 #X connect 7 0 2 0;
 #X connect 8 0 2 0;
 #X connect 9 0 2 0;
