@@ -1,0 +1,46 @@
+#N canvas 388 172 466 511 10;
+#X obj 189 225 inlet;
+#X obj 189 423 outlet;
+#X obj 189 266 unpack f f f;
+#X obj 189 365 makenote;
+#X obj 189 393 pack f f f;
+#X floatatom 189 337 0 0 0 0 - - -;
+#X floatatom 292 330 0 0 0 0 - - -;
+#X text 193 320 pitch;
+#X text 188 201 NOTES;
+#X obj 377 214 inlet;
+#X floatatom 377 377 5 0 0 0 - - -;
+#X text 376 189 CHANNEL;
+#X obj 89 116 cnv 15 100 50 empty empty empty 20 12 0 14 -4034 -1 0
+;
+#X obj 160 121 vsl 15 30 0 500 0 0 empty aux_art art 0 39 0 10 -261234
+-1 -1 1500 1;
+#X text 288 212 art;
+#X floatatom 292 232 5 0 0 0 - - -;
+#X floatatom 223 340 5 0 0 0 - - -;
+#X text 231 320 vel;
+#X obj 112 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -261234
+-258113 -1;
+#X obj 140 121 vsl 15 30 0 127 0 0 empty aux_vel vel 0 39 0 10 -261234
+-1 -1 700 1;
+#X obj 153 51 loadbang;
+#X msg 157 77 50;
+#X connect 0 0 2 0;
+#X connect 0 0 18 0;
+#X connect 2 0 5 0;
+#X connect 2 1 16 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 2;
+#X connect 9 0 10 0;
+#X connect 10 0 4 2;
+#X connect 13 0 15 0;
+#X connect 15 0 6 0;
+#X connect 16 0 3 1;
+#X connect 19 0 16 0;
+#X connect 20 0 21 0;
+#X connect 21 0 13 0;
+#X connect 21 0 19 0;
+#X coords 0 -1 1 1 80 70 1 100 100;
